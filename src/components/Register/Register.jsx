@@ -1,12 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   return (
-    <div className="w-25 mx-auto text-center mt-32">
-      <h2 className="text-3xl mb-4">Please Login</h2>
-      <form >
+    <div>
+      <h2> Please Register</h2>
+      <form onSubmit={handleSubmit}>
         <input
+          onChange={handleEmailChange}
           type="email"
           name="email"
           id="email"
@@ -16,6 +16,7 @@ const Login = () => {
         <br />
         <br />
         <input
+          onBlur={handlePassBlur}
           type="password"
           name="password"
           id="password"
@@ -24,13 +25,15 @@ const Login = () => {
         />{" "}
         <br />
         <br />
-        <input className="btn btn-accent text-white px-8" type="submit" value="Submit" />
+        <input className="btn btn-primary" type="submit" value="Register" />
       </form>
       <small>
-        New to this website ? Please <Link to="/register" className="text-primary">Register</Link>
+        already Registered? Please <Link to="/login">Login</Link>
       </small>
+      <p className="text-danger">{error}</p>
+      <p className="text-success">{succes}</p>
     </div>
   );
 };
 
-export default Login;
+export default Register;

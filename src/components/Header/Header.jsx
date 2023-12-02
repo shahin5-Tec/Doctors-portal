@@ -3,14 +3,13 @@ import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faShoppingCart,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <nav className=" mx-28  px-4  py-5  md:max-w-full lg:px-8 lg:max-w-screen-xl">
+    <nav className=" my-container ">
       <div className="flex relative items-center justify-between">
         <Link
           to="/"

@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.my-container{
+    @apply mx-28  px-4  py-5  md:max-w-full lg:px-4 lg:max-w-screen-xl
+}
+
+
+
+
+
+
